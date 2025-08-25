@@ -48,4 +48,12 @@ const returnTripTicket = {
     console.log(flightTime + " hours");
   }
 };
+// --- تشغيل الدوال ---
+// ترقية تذكرة الذهاب 
+departTripTicket.upgrade();
+// ترقية تذكرة العودة
+returnTripTicket.upgrade();
+// عرض أوقات الرحلة
+departTripTicket.flightTime();
+returnTripTicket.flightTime();
 
