@@ -24,4 +24,28 @@ const departTripTicket = {
     console.log(flightTime + " hours");
   }
 };
+// نفس الكود الاول ولاكن في دالة مختلفة لتذكرة العودة 
+const returnTripTicket = {
+  name: "Brandon",
+  from: "Augsburg, Germany",
+  to: "Pittsburgh, PA",
+  businessClass: true,
+  upgrade() {
+    if (this.businessClass) {
+      console.log("Your ticket is already business class!");
+    } else {
+      this.businessClass = true;
+      console.log("Ticket upgraded to business class!");
+    }
+  },
+  leaveTime: 24,
+  arriveTime: 4,
+  flightTime() {
+    let flightTime = this.arriveTime - this.leaveTime;
+    if (flightTime < 0) {
+      flightTime += 24;
+    }
+    console.log(flightTime + " hours");
+  }
+};
 
